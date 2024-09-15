@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <setting>
+        <appearance>system</appearance>  <!-- system (default), dark, light -->
+        <server_host>192.168.2.12</server_host>
+        <server_port>1883</server_port>
+        <client_id>python-r9-testing</client_id>
+        <client_user>ms</client_user>
+        <client_pw>geheim</client_pw>
+    </setting>
+    <action>
+        <description>Sound - Auf</description>
+        <run>sound</run>
+        <file>sound/sig_open.wav</file>
+        <parameters>none</parameters>
+    </action>
+    <action>
+        <description>Sound - Zu</description>
+        <run>sound</run>
+        <file>sound/sig_close.wav</file>
+        <parameters>none</parameters>
+    </action>
+    <action>
+        <description>Sound - Benachrichtigung</description>
+        <run>sound</run>
+        <file>sound/sig_notification.wav</file>
+        <parameters>none</parameters>
+    </action>
+    <action>
+        <description>Sound - Gefahr</description>
+        <run>sound</run>
+        <file>sound/sig_danger.wav</file>
+        <parameters>none</parameters>
+    </action>
+    <action>
+        <description>Bash-Skript</description>
+        <run>bash</run>
+        <file>/home/ms/.opt/test.sh</file>
+        <parameters>none</parameters>
+    </action>
+    <action>
+        <description>Cam (letzte Aufnahme)</description>
+        <run>bash</run>
+        <file>/home/ms/.opt/cam.sh</file>
+        <parameters>-l</parameters>
+    </action>
+    <device>
+        <description>Bewegung vor Haus</description>
+        <adress>0_userdata/0/Cam_Bewegung</adress>
+        <default_false>Aus</default_false>
+        <default_true>Aus</default_true>
+        <color_false>white</color_false>
+        <color_true>green</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <description>Bewegung vor Wohnung</description>
+        <adress>zigbee/0/00124b0029332612/occupancy</adress>
+        <default_false>Aus</default_false>
+        <default_true>Aus</default_true>
+        <color_false>white</color_false>
+        <color_true>green</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <description>Tür Haus</description>
+        <adress>zigbee/0/a4c138b9b93ff706/opened</adress>
+        <default_false>Aus</default_false>
+        <default_true>Aus</default_true>
+        <color_false>default</color_false>
+        <color_true>default</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <description>Tür Wohnung</description>
+        <adress>zigbee/0/a4c138395f26f84e/opened</adress>
+        <default_false>Aus</default_false>
+        <default_true>Aus</default_true>
+        <color_false>default</color_false>
+        <color_true>default</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <description>Tür Schuppen</description>
+        <adress>zigbee/0/a4c1385cf406bc80/opened</adress>
+        <default_false>Aus</default_false>
+        <default_true>Aus</default_true>
+        <color_false>default</color_false>
+        <color_true>default</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <type>separator</type>
+    </device>
+    <device>
+        <description>Fenster Wohnzimmer</description>
+        <adress>zigbee/0/a4c138c96517e05a/opened</adress>
+        <default_false>Sound - Zu</default_false>
+        <default_true>Sound - Auf</default_true>
+        <color_false>default</color_false>
+        <color_true>default</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <description>Fenster Küche</description>
+        <adress>zigbee/0/a4c138cbbc805659/opened</adress>
+        <default_false>Sound - Zu</default_false>
+        <default_true>Aus</default_true>
+        <color_false>default</color_false>
+        <color_true>default</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <description>Fenster Bad</description>
+        <adress>zigbee/0/a4c1380a0e72ffa0/opened</adress>
+        <default_false>Sound - Zu</default_false>
+        <default_true>Aus</default_true>
+        <color_false>default</color_false>
+        <color_true>default</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <description>Fenster Schlafzimmer</description>
+        <adress>zigbee/0/a4c1381e8701363d/opened</adress>
+        <default_false>Sound - Zu</default_false>
+        <default_true>Aus</default_true>
+        <color_false>default</color_false>
+        <color_true>default</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <type>separator</type>
+    </device>
+    <device>
+        <description>Kleiderschrank</description>
+        <adress>zigbee/0/a4c138ccf83cd5aa/opened</adress>
+        <default_false>Aus</default_false>
+        <default_true>Aus</default_true>
+        <color_false>default</color_false>
+        <color_true>default</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <type>separator</type>
+    </device>
+    <device>
+        <description>Rauch Wohnzimmer</description>
+        <adress>zigbee/0/0015bc003101cb30/smoke</adress>
+        <default_false>Aus</default_false>
+        <default_true>Sound - Gefahr</default_true>
+        <color_false>default</color_false>
+        <color_true>default</color_true>
+        <type>hidden</type>
+    </device>
+    <device>
+        <description>Rauch Proberaum</description>
+        <adress>zigbee/0/0015bc003101cc83/smoke</adress>
+        <default_false>Aus</default_false>
+        <default_true>Sound - Gefahr</default_true>
+        <color_false>default</color_false>
+        <color_true>default</color_true>
+        <type>hidden</type>
+    </device>
+    <device>
+        <description>Rauch Serverraum</description>
+        <adress>zigbee/0/0015bc003101d1f2/smoke</adress>
+        <default_false>Aus</default_false>
+        <default_true>Sound - Gefahr</default_true>
+        <color_false>default</color_false>
+        <color_true>default</color_true>
+        <type>hidden</type>
+    </device>
+    <device>
+        <description>Wasser Heizungskeller</description>
+        <adress>zigbee/0/a4c138851b1343e6/detected</adress>
+        <default_false>Aus</default_false>
+        <default_true>Sound - Gefahr</default_true>
+        <color_false>default</color_false>
+        <color_true>default</color_true>
+        <type>hidden</type>
+    </device>
+    <device>
+        <description>Wasser Küche</description>
+        <adress>zigbee/0/a4c138ef8a60b8ff/detected</adress>
+        <default_false>Aus</default_false>
+        <default_true>Sound - Gefahr</default_true>
+        <color_false>default</color_false>
+        <color_true>default</color_true>
+        <type>hidden</type>
+    </device>
+    <device>
+        <description>Ryzen 9</description>
+        <adress>ping/0/ctioBroker/192_168_2_27</adress>
+        <default_false>Aus</default_false>
+        <default_true>Aus</default_true>
+        <color_false>white</color_false>
+        <color_true>green</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <description>Ryzen 5</description>
+        <adress>ping/0/ctioBroker/192_168_2_38</adress>
+        <default_false>Aus</default_false>
+        <default_true>Aus</default_true>
+        <color_false>white</color_false>
+        <color_true>green</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <description>Core i7</description>
+        <adress>ping/0/ctioBroker/192_168_2_46</adress>
+        <default_false>Aus</default_false>
+        <default_true>Aus</default_true>
+        <color_false>white</color_false>
+        <color_true>green</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <description>Galaxy S9</description>
+        <adress>ping/0/ctioBroker/192_168_2_66</adress>
+        <default_false>Aus</default_false>
+        <default_true>Aus</default_true>
+        <color_false>white</color_false>
+        <color_true>green</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <description>Galaxy S10</description>
+        <adress>ping/0/ctioBroker/192_168_2_37</adress>
+        <default_false>Aus</default_false>
+        <default_true>Aus</default_true>
+        <color_false>white</color_false>
+        <color_true>green</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <description>Huawei</description>
+        <adress>ping/0/ctioBroker/192_168_2_97</adress>
+        <default_false>Aus</default_false>
+        <default_true>Aus</default_true>
+        <color_false>white</color_false>
+        <color_true>green</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <type>separator</type>
+    </device>
+    <device>
+        <description>Desktop Signal</description>
+        <adress>0_userdata/0/Desktop_Signal</adress>
+        <default_false>Aus</default_false>
+        <default_true>Aus</default_true>
+        <color_false>white</color_false>
+        <color_true>green</color_true>
+        <type>bool</type>
+    </device>
+    <device>
+        <type>separator</type>
+    </device>
+    <device>
+        <description>Temperatur Wohnzimmer</description>
+        <adress>zigbee/0/0015bc003101cb30/temperature</adress>
+        <round>1</round>
+        <unit> °C</unit>
+        <type>float</type>
+    </device>
+    <device>
+        <description>Temperatur Außen</description>
+        <adress>zigbee/0/a4c138b90cb634ba/temperature</adress>
+        <round>1</round>
+        <unit> °C</unit>
+        <type>float</type>
+    </device>
+    <device>
+        <description>Luftfeuchtigkeit</description>
+        <adress>zigbee/0/a4c138b90cb634ba/humidity</adress>
+        <round>0</round>
+        <unit> %</unit>
+        <type>float</type>
+    </device>
+</config>

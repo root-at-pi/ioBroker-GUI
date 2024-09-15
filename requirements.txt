@@ -1,0 +1,4 @@
+customtkinter
+paho-mqtt<2.0.0
+Pillow
+playsound
