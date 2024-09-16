@@ -85,3 +85,7 @@ Die *config.xml* beinhaltet einige Beispiel-Konfigurationen
 - [x] Keine neuen Zustände erstellen ***Einschalten***
 
 ![Mqtt Einstellungen](img/mqtt_einstallungen.png)
+
+## Hinweis
+Dieses Projekt habe ich ursprünglich zum Python lernen und für private Zwecke geschrieben.
+Nun ist es schon viele Wochen im Einsatz und hat immer gut funktioniert. Da ich mich künftig auch mit Git und GitHub auseinandersetzen möchte, sehe ich dieses Projekt als guten Anfang :)
