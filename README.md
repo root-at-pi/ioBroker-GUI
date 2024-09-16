@@ -1,4 +1,11 @@
 # ioBroker-GUI
+#### ioBroker GUI ist ein OpenSource Desktop-Client für Linux, welcher um Aufmerksamkeit zu erhalten Sounds abspielt oder Bash-Skripts ausführt.
+Die jeweiligen Zuordnungen lassen sich im Vorfeld konfigurieren oder im Betrieb mit zwei Klicks ändern.
+Die Benutzeroberfläche, Audioausgabe sowie Logs sind in Deutsch gehalten.
+
+Für die Funktion vorrausgesetzt ist eine im ioBroker eingerichtete [Mqtt-Server-Instanz](#Konfiguration-der-Mqtt-Instanz).
+
+![ioBroker GUI 0.14-m](img/iobroker-gui_0.14-m.png)
 
 ## Abhängigkeiten
 ### Debian
@@ -44,10 +51,10 @@ Die *config.xml* beinhaltet einige Beispiel-Konfigurationen
 </action>
 ```
 #### Es gibt aktuell 4 Typen von Geräten
-- bool - Wahr/Unwahr, sichtbar mit Aktion
-- hidden - wie bool nur unsichtbar
-- float - Anzeige einer Dezimalzahl ohne Aktion
-- separator - Trenner
+- `bool` Wahr/Unwahr, sichtbar mit Aktion
+- `hidden` wie bool nur unsichtbar
+- `float` Anzeige einer Dezimalzahl ohne Aktion
+- `separator` Trenner
 ```xml
 <device>
     <description>Tür Haus</description>                     <!-- Name des Geräts -->
@@ -63,4 +70,18 @@ Die *config.xml* beinhaltet einige Beispiel-Konfigurationen
 ```
 
 ## Konfiguration der Mqtt-Instanz
-text
+### Verbindung
+- IP `Server/Broker`
+- Benuter `Benutzername`
+- Passwort `Passwort`
+
+### Server Settings
+- Leere Session erzwingen `Immer leere Session für alles Clients`
+
+### Mqtt Einstellungen
+- Maske zum Bekanntgeben eigener States `0_userdata.0.* zigbee.0.* usw.`
+- [ ] Eigene States beim Verbinden publizieren ***Abschalten***
+- [x] Sende auch Zustände (ack=true) ***Einschalten***
+- [x] Keine neuen Zustände erstellen ***Einschalten***
+
+![Mqtt Einstellungen](img/mqtt_einstallungen.png)
