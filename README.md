@@ -10,7 +10,7 @@ Für die Funktion vorrausgesetzt ist eine im ioBroker eingerichtete [Mqtt-Server
 ## Abhängigkeiten
 ### Debian
 ```
-apt install git python3 python3-venv python3-pip
+apt install git python3 python3-tk python3-venv python3-pip
 ```
 
 ## Installation
