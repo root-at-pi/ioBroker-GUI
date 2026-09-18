@@ -3,7 +3,7 @@ import paho.mqtt.client as mqtt_client
 from PIL import Image, ImageTk
 from threading import Thread
 from xml.etree import ElementTree
-from playsound import playsound
+from playsound3 import playsound
 from os import path, system
 from time import sleep, localtime, strftime, time
 
